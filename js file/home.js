@@ -1,23 +1,19 @@
 
-
+// start js for header
+// blog btn
 document.getElementById('button-1')
-    .addEventListener('click', function (d) {
-        d.preventDefault()
-window.location.href('blog.html')
-document.getElementById('button-1').classList.remove('hidden')
+    .addEventListener('click', function (event) {
+        event.preventDefault()
+        window.location.replace('blog.html')
 
     })
 
-
-
-
+// donate and history btn
 
 document.getElementById('button-2').classList.add('bg-lime-300')
 document.getElementById('button-2').classList.remove('hidden')
 
-
-
-
+// history btn
 document.getElementById('button-3')
     .addEventListener('click', function (d) {
         d.preventDefault()
@@ -28,6 +24,7 @@ document.getElementById('button-3')
 
     })
 
+// donate btn
 document.getElementById('button-2')
     .addEventListener('click', function (y) {
         y.preventDefault()
@@ -39,76 +36,222 @@ document.getElementById('button-2')
     })
 
 
-// document.getElementById('Donate-btn')
-//     .addEventListener('click', function (event) {
-//         event.preventDefault()
-//         const donatinput = parseFloat(document.getElementById('donat-input').value)
-//         if (!isNaN(donatinput)) {
-//             const balance = parseFloat(document.getElementById('balance').innerText)
-//             const newbalance = balance + donatinput
-//             document.getElementById('balance').innerText = newbalance
-//             const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
-
-//             if (mainbalance < donatinput && mainbalance === 0) {
-//                 alert('Dont have enough Main balance so how will you donate')
-//                 document.getElementById('balance').innerText = balance
-
-//                 return
-//             }
-
-//             if (donatinput > mainbalance) {
-//                 alert('its so high mor than main balance')
-//                 document.getElementById('main-balance').innerText = mainbalance
-//                 document.getElementById('balance').innerText = balance
-//                 return
-//             }
 
 
-//             const discount = mainbalance - donatinput
-//             document.getElementById('main-balance').innerText = discount
-//         } else {
-//             alert('its not number or maybe its so little , please donate more')
-
-//         }
-//     })
-
-
-
-
-
-
-
+// end js for header
 
 
 
 document.getElementById('Donate-btn')
     .addEventListener('click', function (event) {
         event.preventDefault()
-         const inputField = getINputFieldBYId('Donate-btn')
-        
-         return inputField
-    })
+
+        const donatinput = parseFloat(document.getElementById('donat-input').value)
+        if (!isNaN(donatinput)) {
+            const balance = parseFloat(document.getElementById('balance').innerText)
+            const newbalance = balance + donatinput
+            document.getElementById('balance').innerText = newbalance 
+
+            const element = `${donatinput} this is donated `
+            document.getElementById('history-1').append(element)
+            const row1 = ` ${new Date}`
+            document.getElementById('history-1').append(row1)
 
 
-    document.getElementById('Donate-btn-1')
-    .addEventListener('click', function (event) {
-        event.preventDefault()
-         const inputField =getINputFieldBYId('Donate-btn-1')
-         
+            const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
+            // const row = `${donatinput} this is donated `
+            // document.getElementById('history-1').append(row) 
+            // const row1 = ` ${new Date}   `
+            //                 document.getElementById('history-2').append(row1) 
+            if (mainbalance < donatinput || mainbalance === 0) {
+                alert('Dont have enough Main balance so how will you donate')
+                document.getElementById('balance').innerText = balance
+
+ 
+                // const donationEntry = document.createElement('div');
+                // donationEntry.innerHTML = `
+                //     <p>${donateInput.toFixed(2)} has been donated.</p>
+                //     <p>${new Date().toLocaleString()}</p>
+                // `;
+                // historyElement.appendChild(donationEntry);
         
-         return inputField
-    })
+
+
+
+
+                const row = `${donatinput} is donated\n
+                ${new Date} `
+                document.getElementById('history-1').append(row)
+               
+                //    const row = ` 
+                //    <div>
+                //    <p>  ${donatinput}is donated</p> 
+                //    \n 
+                //    <p> ${new Date} </p>
+                //    </div> `
+                //    document.getElementById('history-1').append(row) 
+                return
+            }
+
+
+            document.getElementById('donat-input').value = " "
+            const discount = mainbalance - donatinput
+            document.getElementById('main-balance').innerText = discount
+
+            if (donatinput > mainbalance) {
+                alert('its so high mor than main balance')
+                document.getElementById('main-balance').innerText = mainbalance
+                document.getElementById('balance').innerText = balance
+                //    const row =`${donatinput} is donated \n ${new Date} `
+                //    document.getElementById('history-1').append(row)  
+                return
+            }
+          
+        } else {
+            alert('its not number or maybe its so little , please donate more')
+
+        }
+
+    }) 
+
+ 
+document.getElementById('Donate-btn-2')
+.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    const donatinput = parseFloat(document.getElementById('donat-input-2').value)
+    if (!isNaN(donatinput)) {
+        const balance = parseFloat(document.getElementById('balance-2').innerText)
+        const newbalance = balance + donatinput
+        document.getElementById('balance-2').innerText = newbalance 
+
+        const element = `${donatinput} this is donated `
+        document.getElementById('history-1').append(element)
+        const row1 = ` ${new Date}`
+        document.getElementById('history-1').append(row1)
+
+
+        const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
+        // const row = `${donatinput} this is donated `
+        // document.getElementById('history-1').append(row) 
+        // const row1 = ` ${new Date}   `
+        //                 document.getElementById('history-2').append(row1) 
+        if (mainbalance < donatinput || mainbalance === 0) {
+            alert('Dont have enough Main balance so how will you donate')
+            document.getElementById('balance').innerText = balance
+
+
+            // const donationEntry = document.createElement('div');
+            // donationEntry.innerHTML = `
+            //     <p>${donateInput.toFixed(2)} has been donated.</p>
+            //     <p>${new Date().toLocaleString()}</p>
+            // `;
+            // historyElement.appendChild(donationEntry);
     
 
 
 
-// document.getElementById('button-2')
-// .addEventListener('click',function(y){
-//     y.preventDefault()
 
-//  const me= document.mybutton('Donate-btn')
-// return(me)
-// })
+            const row = `${donatinput} is donated\n${new Date} `
+            document.getElementById('history-1').append(row)
+            //    const row = ` 
+            //    <div>
+            //    <p>  ${donatinput}is donated</p> 
+            //    \n 
+            //    <p> ${new Date} </p>
+            //    </div> `
+            //    document.getElementById('history-1').append(row) 
+            // return
+        }
+
+
+        document.getElementById('donat-input').value = " "
+        const discount = mainbalance - donatinput
+        document.getElementById('main-balance').innerText = discount
+
+        if (donatinput > mainbalance) {
+            alert('its so high mor than main balance')
+            document.getElementById('main-balance').innerText = mainbalance
+            document.getElementById('balance').innerText = balance
+            //    const row =`${donatinput} is donated \n ${new Date} `
+            //    document.getElementById('history-1').append(row)  
+            return
+        }
+      
+    } else {
+        alert('its not number or maybe its so little , please donate more')
+
+    }
+
+}) 
+
+ 
+document.getElementById('Donate-btn-3')
+.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    const donatinput = parseFloat(document.getElementById('donat-input-3').value)
+    if (!isNaN(donatinput)) {
+        const balance = parseFloat(document.getElementById('balance-3').innerText)
+        const newbalance = balance + donatinput
+        document.getElementById('balance-3').innerText = newbalance 
+
+        const element = `${donatinput} this is donated `
+        document.getElementById('history-1').append(element)
+        const row1 = ` ${new Date}`
+        document.getElementById('history-1').append(row1)
+
+
+        const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
+        // const row = `${donatinput} this is donated `
+        // document.getElementById('history-1').append(row) 
+        // const row1 = ` ${new Date}   `
+        //                 document.getElementById('history-2').append(row1) 
+        if (mainbalance < donatinput || mainbalance === 0) {
+            alert('Dont have enough Main balance so how will you donate')
+            document.getElementById('balance').innerText = balance
+
+
+            // const donationEntry = document.createElement('div');
+            // donationEntry.innerHTML = `
+            //     <p>${donateInput.toFixed(2)} has been donated.</p>
+            //     <p>${new Date().toLocaleString()}</p>
+            // `;
+            // historyElement.appendChild(donationEntry);
+    
 
 
 
+
+            const row = `${donatinput} is donated for  Injured in The Quata Movement\n${new Date} `
+            document.getElementById('history-1').append(row)
+            //    const row = ` 
+            //    <div>
+            //    <p>  ${donatinput}is donated</p> 
+            //    \n 
+            //    <p> ${new Date} </p>
+            //    </div> `
+            //    document.getElementById('history-1').append(row) 
+            return
+        }
+
+
+        document.getElementById('donat-input').value = " "
+        const discount = mainbalance - donatinput
+        document.getElementById('main-balance').innerText = discount
+
+        if (donatinput > mainbalance) {
+            alert('its so high mor than main balance')
+            document.getElementById('main-balance').innerText = mainbalance
+            document.getElementById('balance').innerText = balance
+            //    const row =`${donatinput} is donated \n ${new Date} `
+            //    document.getElementById('history-1').append(row)  
+            return
+        }
+      
+    } else {
+        alert('its not number or maybe its so little , please donate more')
+
+    }
+
+}) 

@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog pge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog pge</title>
 
-    <!-- dasyui link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- dasyui link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
 
-    </header>
-    <main>
-          <section>
-            <div >
-                <div class="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                    <div class="collapse-content">
-                      <p>hello</p>
-                    </div>
-                  </div>
-                  <div class="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                    <div class="collapse-content">
-                      <p>hello</p>
-                    </div>
-                  </div>
-                  <div class="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-                    <div class="collapse-content">
-                      <p>hello</p>
-                    </div>
-                  </div>
-            </div>
-          </section>
-    </main>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <section class="mt-10">
+      <div class="w-5/6 mx-auto space-y-6">
+
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-3xl font-medium">What is the Document Object model ( DOM)?</div>
+          <div class="collapse-content text-xl">
+            <p>The Document Object model (DOM) is the data representation of the object that comparise the structure aND
+              content of a document on the web </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-3xl font-medium"> How do you select an element from the DOM
+          </div>
+          <div class="collapse-content text-xl  ">
+            <p> using getelementby id() <br>
+              using getelementtagname() <br>
+              using getelementclassname () <br>
+              using quarryselector( ) <br>
+              using quarryselectorall() <br>
+
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-3xl font-medium"> What is event delegation in the contest of the dom why is it
+            usefull?</div>
+          <div class="collapse-content text-xl ">
+            <p>Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-3xl font-medium">How do you manipulate an element attribute and style useing
+            the DOM </div>
+          <div class="collapse-content text-xl">
+            <p>Manipulating Element Attributes
+              If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
