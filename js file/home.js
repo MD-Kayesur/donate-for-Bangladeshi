@@ -52,44 +52,20 @@ document.getElementById('Donate-btn')
             const newbalance = balance + donatinput
             document.getElementById('balance').innerText = newbalance 
 
-            const element = `${donatinput} this is donated `
+            const element = `${donatinput} this is donated for flood at Noakhali, Bangladesh`
             document.getElementById('history-1').append(element)
+            
             const row1 = ` ${new Date}`
             document.getElementById('history-1').append(row1)
 
 
             const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
-            // const row = `${donatinput} this is donated `
-            // document.getElementById('history-1').append(row) 
-            // const row1 = ` ${new Date}   `
-            //                 document.getElementById('history-2').append(row1) 
+              
             if (mainbalance < donatinput || mainbalance === 0) {
                 alert('Dont have enough Main balance so how will you donate')
                 document.getElementById('balance').innerText = balance
 
- 
-                // const donationEntry = document.createElement('div');
-                // donationEntry.innerHTML = `
-                //     <p>${donateInput.toFixed(2)} has been donated.</p>
-                //     <p>${new Date().toLocaleString()}</p>
-                // `;
-                // historyElement.appendChild(donationEntry);
-        
-
-
-
-
-                const row = `${donatinput} is donated\n
-                ${new Date} `
-                document.getElementById('history-1').append(row)
-               
-                //    const row = ` 
-                //    <div>
-                //    <p>  ${donatinput}is donated</p> 
-                //    \n 
-                //    <p> ${new Date} </p>
-                //    </div> `
-                //    document.getElementById('history-1').append(row) 
+  
                 return
             }
 
@@ -102,8 +78,7 @@ document.getElementById('Donate-btn')
                 alert('its so high mor than main balance')
                 document.getElementById('main-balance').innerText = mainbalance
                 document.getElementById('balance').innerText = balance
-                //    const row =`${donatinput} is donated \n ${new Date} `
-                //    document.getElementById('history-1').append(row)  
+                  
                 return
             }
           
@@ -125,47 +100,23 @@ document.getElementById('Donate-btn-2')
         const newbalance = balance + donatinput
         document.getElementById('balance-2').innerText = newbalance 
 
-        const element = `${donatinput} this is donated `
+        const element = `${donatinput} this is donated For Flood Relief in Feni, Bangladesh`
         document.getElementById('history-1').append(element)
         const row1 = ` ${new Date}`
         document.getElementById('history-1').append(row1)
 
 
         const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
-        // const row = `${donatinput} this is donated `
-        // document.getElementById('history-1').append(row) 
-        // const row1 = ` ${new Date}   `
-        //                 document.getElementById('history-2').append(row1) 
+         
         if (mainbalance < donatinput || mainbalance === 0) {
             alert('Dont have enough Main balance so how will you donate')
             document.getElementById('balance').innerText = balance
-
-
-            // const donationEntry = document.createElement('div');
-            // donationEntry.innerHTML = `
-            //     <p>${donateInput.toFixed(2)} has been donated.</p>
-            //     <p>${new Date().toLocaleString()}</p>
-            // `;
-            // historyElement.appendChild(donationEntry);
-    
-
-
-
-
-            const row = `${donatinput} is donated\n${new Date} `
-            document.getElementById('history-1').append(row)
-            //    const row = ` 
-            //    <div>
-            //    <p>  ${donatinput}is donated</p> 
-            //    \n 
-            //    <p> ${new Date} </p>
-            //    </div> `
-            //    document.getElementById('history-1').append(row) 
-            // return
+ 
+            return
         }
 
 
-        document.getElementById('donat-input').value = " "
+        document.getElementById('donat-input-2').value = " "
         const discount = mainbalance - donatinput
         document.getElementById('main-balance').innerText = discount
 
@@ -196,47 +147,23 @@ document.getElementById('Donate-btn-3')
         const newbalance = balance + donatinput
         document.getElementById('balance-3').innerText = newbalance 
 
-        const element = `${donatinput} this is donated `
+        const element = `${donatinput} this is donated Injured in The Quata Movement `
         document.getElementById('history-1').append(element)
         const row1 = ` ${new Date}`
         document.getElementById('history-1').append(row1)
 
 
         const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
-        // const row = `${donatinput} this is donated `
-        // document.getElementById('history-1').append(row) 
-        // const row1 = ` ${new Date}   `
-        //                 document.getElementById('history-2').append(row1) 
+        
         if (mainbalance < donatinput || mainbalance === 0) {
             alert('Dont have enough Main balance so how will you donate')
             document.getElementById('balance').innerText = balance
-
-
-            // const donationEntry = document.createElement('div');
-            // donationEntry.innerHTML = `
-            //     <p>${donateInput.toFixed(2)} has been donated.</p>
-            //     <p>${new Date().toLocaleString()}</p>
-            // `;
-            // historyElement.appendChild(donationEntry);
-    
-
-
-
-
-            const row = `${donatinput} is donated for  Injured in The Quata Movement\n${new Date} `
-            document.getElementById('history-1').append(row)
-            //    const row = ` 
-            //    <div>
-            //    <p>  ${donatinput}is donated</p> 
-            //    \n 
-            //    <p> ${new Date} </p>
-            //    </div> `
-            //    document.getElementById('history-1').append(row) 
+ 
             return
         }
 
 
-        document.getElementById('donat-input').value = " "
+        document.getElementById('donat-input-3').value = " "
         const discount = mainbalance - donatinput
         document.getElementById('main-balance').innerText = discount
 
@@ -244,8 +171,7 @@ document.getElementById('Donate-btn-3')
             alert('its so high mor than main balance')
             document.getElementById('main-balance').innerText = mainbalance
             document.getElementById('balance').innerText = balance
-            //    const row =`${donatinput} is donated \n ${new Date} `
-            //    document.getElementById('history-1').append(row)  
+             
             return
         }
       
