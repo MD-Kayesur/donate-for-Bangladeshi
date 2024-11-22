@@ -53,8 +53,7 @@ document.getElementById('Donate-btn')
             document.getElementById('balance').innerText = newbalance 
 
             const element = `${donatinput} this is donated for flood at Noakhali, Bangladesh`
-            document.getElementById('history-1').append(element)
-            
+            document.getElementById('history-1').append(element) 
             const row1 = ` ${new Date}`
             document.getElementById('history-1').append(row1)
 
@@ -101,9 +100,9 @@ document.getElementById('Donate-btn-2')
         document.getElementById('balance-2').innerText = newbalance 
 
         const element = `${donatinput} this is donated For Flood Relief in Feni, Bangladesh`
-        document.getElementById('history-1').append(element)
+        document.getElementById('history-2').append(element)
         const row1 = ` ${new Date}`
-        document.getElementById('history-1').append(row1)
+        document.getElementById('history-2').append(row1)
 
 
         const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
@@ -148,9 +147,9 @@ document.getElementById('Donate-btn-3')
         document.getElementById('balance-3').innerText = newbalance 
 
         const element = `${donatinput} this is donated Injured in The Quata Movement `
-        document.getElementById('history-1').append(element)
+        document.getElementById('history-3').append(element)
         const row1 = ` ${new Date}`
-        document.getElementById('history-1').append(row1)
+        document.getElementById('history-3').append(row1)
 
 
         const mainbalance = parseFloat(document.getElementById('main-balance').innerText)
